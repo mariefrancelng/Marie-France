@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio rétro de Marie-France Lunganga">
+    <meta name="keywords" content="portfolio, retro, web, design, development, front-end, product owner, full-stack, Marie-France Lunganga, product">
+    <meta name="author" content="Marie-France Lunganga">
+    <title>Marie-France's portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo/Variation.svg">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/responsive.css">
+</head>
+<body>
+    <header>
+        <select name="language" id="lang-select" title="choisir une langue">
+            <option value="FR">🇫🇷</option>
+            <option value="EN">🇬🇧</option>
+            <option value="KR">🇰🇷</option>
+        </select>
+    </header>
+
+    <main id="window_container">
+
+        <img src="assets/icons/etoile.svg" alt="étoile" class="star">
+        <img src="assets/icons/duo-fruit.svg" alt="fruits" class="duo_fruit">
+    
+
+        <div class="browser_window">
+            <div class="window_buttons">
+                <div class="window_button minimize"></div>
+                <div class="window_button maximize"></div>
+                <div class="window_button close"></div>
+            </div>
+            
+            <div class="window_content">
+                <div class="content-wrapper">
+                    <h1 data-i18n="welcome">BIENVENUE</h1>
+                    <a href="home.html">
+                        <button id="main_button" class="enter_button" data-i18n="explore">EXPLORER</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="src/translation.js"></script>
+</body>
+</html>

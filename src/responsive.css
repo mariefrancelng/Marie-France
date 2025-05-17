@@ -1,0 +1,306 @@
+/* Media queries pour INDEX.HTML */
+/* Très grand écrans (1901px et plus) */
+@media (min-width: 1901px) {
+    #window_container {
+      max-width: 1600px;
+      height: 80vh;
+    }
+    
+    .star {
+      top: -43%;
+      left: -25%;
+      width: clamp(120px, 36vw, 900px);
+    }
+    
+    .duo_fruit {
+      bottom: 0;
+      right: -10%;
+      width: clamp(300px, 33vw, 850px);
+    }
+    
+    h1 {
+      font-size: clamp(40px, 7vw, 100px);
+    }
+    
+    .retro-button {
+      padding: clamp(12px, 1.2vw, 20px) clamp(25px, 2.5vw, 40px);
+      border: 4px solid var(--black);
+      border-radius: 12px;
+      box-shadow: 7px 7px 0 var(--black);
+      font-size: clamp(20px, 1.5vw, 30px);
+      margin-top: clamp(20px, 2vw, 35px);
+    }
+    
+    .window_content {
+      background-size: clamp(15px, 1.5vw, 25px) clamp(15px, 1.5vw, 25px);
+    }
+    
+    .browser_window {
+      border-radius: 20px;
+      border: 4px solid var(--black);
+      box-shadow: 8px 8px 0 var(--black);
+    }
+    
+    .window_buttons {
+      padding: 15px;
+      border-bottom: 4px solid var(--black);
+    }
+    
+    .window_button {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+      border: 2px solid var(--black);
+    }
+}
+
+/* Grand écrans (1600px - 1900px) */
+@media (min-width: 1600px) and (max-width: 1900px) {
+    #window_container {
+      max-width: 1400px;
+      height: 75vh;
+    }
+    
+    .star {
+      top: -30%;
+      left: -30%;
+      width: clamp(100px, 50vw, 800px);
+    }
+    
+    .duo_fruit {
+      bottom: 0;
+      right: -7%;
+      width: clamp(250px, 47vw, 750px);
+    }
+    
+    h1 {
+      font-size: clamp(30px, 8vw, 75px);
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+    #window_container {
+      max-width: 1100px;
+      height: 70vh;
+    }
+    
+    .browser_window {
+      border-radius: clamp(8px, 1.5vw, 12px);
+      border: clamp(2px, 0.4vw, 8px) solid var(--black);
+    }
+    
+    .window_buttons {
+      padding: clamp(6px, 1.2vw, 9px);
+      border-bottom: clamp(2px, 0.4vw, 8px) solid var(--black);
+    }
+    
+    .star {
+     top: -43%;
+     left: -25%;
+     width: clamp(100px, 28vw, 400px);
+    }
+    
+    .duo_fruit {
+     bottom: -22%;
+     right: -16%;
+     width: clamp(220px, 35vw, 500px);
+    }
+}
+
+/* Tablettes et petits ordinateurs (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #window_container {
+      max-width: 900px;
+      height: 45vh;
+    }
+    
+    .browser_window {
+      border: clamp(2px, 0.3vw, 6px) solid var(--black);
+      box-shadow: 0 clamp(4px, 0.8vw, 8px) clamp(12px, 2.5vw, 25px) rgba(0, 0, 0, 0.3);
+    }
+    
+    .window_buttons {
+      border-bottom: clamp(2px, 0.3vw, 6px) solid var(--black);
+    }
+    
+    .star {
+      top: -15%;
+      left: -21%;
+      width: clamp(90px, 36vw, 350px);
+    }
+    
+    .duo_fruit {
+      bottom: 0;
+      right: -5%;
+      width: clamp(200px, 38vw, 370px);
+    }
+    
+    h1 {
+      font-size: clamp(28px, 7vw, 65px);
+    }
+    
+    .window_content {
+      background-size: clamp(8px, 1.8vw, 18px) clamp(8px, 1.8vw, 18px);
+    }
+}
+
+/* Tablettes (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    #window_container {
+      width: 92%;
+      max-width: 750px;
+      height: 50vh;
+    }
+    
+    .browser_window {
+      border-radius: clamp(6px, 1.2vw, 10px);
+      border: clamp(2px, 0.3vw, 5px) solid var(--black);
+      box-shadow: 0 clamp(3px, 0.6vw, 6px) clamp(10px, 2vw, 20px) rgba(0, 0, 0, 0.3);
+    }
+    
+    .window_buttons {
+      padding: clamp(5px, 1vw, 8px);
+      border-bottom: clamp(2px, 0.3vw, 5px) solid var(--black);
+    }
+    
+    .window_button {
+      width: clamp(10px, 1.8vw, 14px);
+      height: clamp(10px, 1.8vw, 14px);
+      margin-left: clamp(4px, 0.8vw, 7px);
+    }
+    
+    .star {
+      top: -24%;
+      left: -23%;
+      width: clamp(80px, 44vw, 350px);
+    }
+    
+    .duo_fruit {
+      bottom: 0;
+      right: -5%;
+      width: clamp(180px, 46vw, 350px);
+    }
+    
+    h1 {
+      font-size: clamp(26px, 8vw, 60px);
+    }
+    
+    .window_content {
+      background-size: clamp(7px, 1.5vw, 15px) clamp(7px, 1.5vw, 15px);
+      padding: clamp(8px, 1.8vw, 18px);
+    }
+}
+
+/* Tablettes portrait et grands téléphones (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    #window_container {
+      width: 95%;
+      height: 50vh;
+    }
+    
+    .browser_window {
+      border-radius: clamp(5px, 1vw, 8px);
+      border: clamp(1px, 0.25vw, 4px) solid var(--black);
+      box-shadow: 0 clamp(3px, 0.5vw, 5px) clamp(8px, 1.5vw, 15px) rgba(0, 0, 0, 0.3);
+    }
+    
+    .window_buttons {
+      padding: clamp(4px, 0.8vw, 6px);
+      border-bottom: clamp(1px, 0.25vw, 4px) solid var(--black);
+    }
+    
+    .window_button {
+      width: clamp(8px, 1.5vw, 12px);
+      height: clamp(8px, 1.5vw, 12px);
+      margin-left: clamp(3px, 0.6vw, 5px);
+    }
+    
+    .minimize::after,
+    .close::before, 
+    .close::after {
+      height: 1px;
+    }
+    
+    .star {
+      top: -12%;
+      left: -17%;
+      width: clamp(70px, 35vw, 200px);
+    }
+    
+    .duo_fruit {
+      bottom: 0;
+      right: -15px;
+      width: clamp(150px, 40vw, 350px);
+    }
+    
+    h1 {
+      font-size: clamp(24px, 10.5vw, 55px);
+    }
+    
+    .window_content {
+      background-size: clamp(6px, 1.2vw, 12px) clamp(6px, 1.2vw, 12px);
+      padding: clamp(6px, 1.5vw, 15px);
+    }
+    
+    #lang-select {
+      top: clamp(8px, 1.5vw, 15px);
+      right: clamp(8px, 1.5vw, 15px);
+      font-size: clamp(12px, 1.2vw, 14px);
+    }
+}
+
+/* Téléphones mobiles (480px - 575px) */
+@media (min-width: 480px) and (max-width: 575px) {
+    #window_container {
+      width: 98%;
+      height: 30vh;
+    }
+    
+    .browser_window {
+      border-radius: 5px;
+      border: 2px solid var(--black);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .window_buttons {
+      padding: 4px;
+      border-bottom: 2px solid var(--black);
+    }
+    
+    .window_button {
+      width: 8px;
+      height: 8px;
+      margin-left: 3px;
+      border: 1px solid var(--black);
+    }
+    
+    .star {
+      top: -6%;
+      left: -11%;
+      width: 120px;
+    }
+    
+    .duo_fruit {
+      bottom: 0;
+      right: -3px;
+      width: 140px;
+    }
+    
+    h1 {
+      font-size: 45px;
+    }
+    
+    .window_content {
+      background-size: 8px 8px;
+      padding: 10px;
+    }
+    
+    #lang-select {
+      top: 8px;
+      right: 8px;
+      font-size: 12px;
+      padding: 2px;
+      border-radius: 3px;
+      border: 1px solid var(--black);
+    }
+}

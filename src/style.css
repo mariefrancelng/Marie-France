@@ -1,0 +1,326 @@
+@font-face {
+    font-family: 'Chalty';
+    src: url('/assets/fonts/Chalty-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chalty';
+    src: url('/assets/fonts/Chalty-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chalty';
+    src: url('/assets/fonts/Chalty-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chalty';
+    src: url('/assets/fonts/Chalty-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chalty';
+    src: url('/assets/fonts/Chalty-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root{
+    --font-primary: 'Chalty', sans-serif;
+
+    --h1-title-size: 2.5rem;
+    --h1-font-weight: 900;
+    --h1-line-height: 1.2;
+
+    --h2-subtitle-size: 2rem;
+    --h2-font-weight: 700;
+    --h2-line-height: 1.3;
+
+    --h3-subtitle-size: 1.5rem;
+    --h3-font-weight:600;
+    --h3-line-height: 1.4;
+
+    --h4-subtitle-size: 1.3rem;
+    --h4-font-weight: 500;
+    --h4-line-height:1.5;
+
+    --p-body-size: 1rem;
+    --p-font-weight: 400;
+    --p-line-height: 1.6;
+
+    --white: #fff;
+    --black: #000;
+    --yellow: #FFCD04;
+    --blue: #4780C3;
+    --pink: #F791C3;
+    --purple: #5F58A6;
+    --darkorange: #E63C23;
+    --darkpink: #ED1B68;
+    --beige: #FFE8CE;
+    --green: #53BA65;
+    --grid-color: #918F8D35;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: var(--font-primary);
+    font-size: var(--h1-title-size);
+    font-weight: var(--h1-font-weight);
+    line-height: var(--h1-line-height);
+    color: var(--black);
+}
+
+h2 {
+    font-family: var(--font-primary);
+    font-size: var(--h2-subtitle-size);
+    font-weight: var(--h2-font-weight);
+    line-height: var(--h2-line-height);
+    color: var(--black);
+}
+
+h3 {
+    font-family: var(--font-primary);
+    font-size: var(--h3-subtitle-size);
+    font-weight: var(--h3-font-weight);
+    line-height: var(--h3-line-height);
+    color: var(--black);
+}
+
+h4 {
+    font-family: var(--font-primary);
+    font-size: var(--h4-size);
+    font-weight: var(--h4-font-weight);
+    line-height: var(--h4-line-height);
+    color: var(--black);
+}
+
+p {
+    font-family: var(--font-primary);
+    font-size: var(--p-body-size);
+    font-weight: var(--p-font-weight);
+    line-height: var(--p-line-height);
+    color: var(--black);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--purple);
+    
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lang-select {
+    position: absolute;
+    top: clamp(10px, 2vw, 20px);
+    right: clamp(10px, 2vw, 20px);
+
+    padding: clamp(3px, 0.8vw, 5px);
+    border-radius: clamp(3px, 0.6vw, 5px);
+    border: clamp(1px, 0.3vw, 2px) solid var(--black);
+
+    font-size: clamp(14px, 1.5vw, 16px);
+    cursor: pointer;
+    z-index: 10;
+}
+
+#window_container {
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+
+    position: relative;
+    margin: 0 auto;
+}
+
+.browser_window {
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--white);
+    border-radius: clamp(8px, 2vw, 15px);
+    overflow: hidden;
+    box-shadow: clamp(5px, 2vw, 5px) clamp(5px, 1vw, 4px) 0 var(--black);
+
+    display: flex;
+    flex-direction: column;
+    border: clamp(2px, 0.5vw, 10px) solid var(--black);
+    position: relative;
+    z-index: 2;
+}
+
+.window_buttons {
+    background-color: var(--darkorange);
+    padding: clamp(6px, 1.5vw, 10px);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: clamp(2px, 0.5vw, 10px) solid var(--black);
+}
+
+.window_button {
+    width: clamp(12px, 2vw, 16px);
+    height: clamp(12px, 2vw, 16px);
+    border: clamp(1px, 0.3vw, 2px) solid var(--black);
+
+    display: inline-block;
+    margin-left: clamp(5px, 1vw, 8px);
+}
+
+.minimize {
+    background-color: var(--yellow);
+    position: relative;
+}
+
+.minimize::after {
+    content: '';
+    position: absolute;
+
+    width: 60%;
+    height: clamp(1px, 0.5vw, 2px);
+
+    background-color: var(--black);
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+
+.maximize {
+    background-color: var(--blue);
+}
+
+.close {
+    background-color: var(--pink);
+    position: relative;
+}
+
+.close::before, .close::after {
+    content: '';
+    position: absolute;
+
+    width: 70%;
+    height: clamp(1px, 0.3vw, 2px);
+
+    background-color: var(--black);
+    top: 50%;
+    left: 15%
+}
+
+.close::before {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.close::after {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.window_content {
+    background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+                            linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: clamp(10px, 2vw, 20px) clamp(10px, 2vw, 20px);
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: clamp(10px, 2vw, 20px);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(30px, 10vw, 80px);
+    word-break: break-word;
+    margin : 0
+}
+
+.enter_button {
+    display: block;
+    margin: clamp(15px, 4vw 30px) auto 0;
+    padding: clamp(8px, 1.5vw, 15px) clamp(15px, 3vw, 30px);
+
+    background-color: var(--green);
+    border: clamp(2px, 0.5vw, 3px) solid var(--black);
+    border-radius: clamp(5px, 1vw, 8px);
+    box-shadow: clamp(3px, 0.8vw, 5px) clamp(3px, 0.8vw, 5px) 0 var(--black);
+
+    font-family: var(--font-primary);
+    font-weight: var(--h3-font-weight);
+    font-size: clamp(16px, 2vw, 24px);
+    color: var(--black);
+
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.enter_button:hover {
+    transform: translateY(-2px);
+    box-shadow: clamp(4px, 1vw, 6px) clamp(4px, 1vw, 6px) 0 var(--black);
+}
+
+.enter_button:active {
+    transform: translateY(2px);
+    box-shadow: clamp(1px, 0.5vw, 3px) clamp(1px, 0.5vw, 3px) 0 var(--black);
+}
+
+
+
+.star {
+    position: absolute;
+    top: -33%;
+    left: -20%;
+
+    width: clamp(100px, 30vw, 450px);
+    height: auto;
+
+    animation: rotate 10s infinite linear;
+    z-index: 3;
+}
+
+.duo_fruit {
+    position: absolute;
+    bottom: -13%;
+    right: -10%;
+
+    width: clamp(300px, 35vw, 500px);
+    height: auto;
+
+    animation: bounce 2s infinite ease-in-out;
+    z-index: 3;
+}
