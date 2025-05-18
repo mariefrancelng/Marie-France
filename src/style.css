@@ -145,6 +145,8 @@ body {
     z-index: 10;
 }
 
+
+
 #window_container {
     width: 90%;
     max-width: 1200px;
@@ -298,8 +300,6 @@ a {
     transform: translateY(2px);
     box-shadow: clamp(1px, 0.5vw, 3px) clamp(1px, 0.5vw, 3px) 0 var(--black);
 }
-
-
 
 .star {
     position: absolute;
