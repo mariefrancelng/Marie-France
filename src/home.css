@@ -272,7 +272,7 @@ nav.scrolled #lang-select {
 /* section about_me */
 .content_section {
     padding: clamp(50px, 5vw, 100px);
-    min-height: 100vh;
+    min-height: 70vh;
 
     display: flex;
     justify-content: center;
@@ -403,3 +403,116 @@ nav.scrolled #lang-select {
 #why_content strong {
     color: var(--darkpink);
 }
+
+/* section skills */
+#skills {
+    display: flex;
+    flex-direction: column;
+}
+.skills_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+    margin-bottom: clamp(30px, 5vw, 50px);
+}
+
+.skills_categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+    grid-gap: clamp(15px, 3vw, 30px);
+    width: 75%;
+}
+
+.skill_category {
+    font-family: var(--font-primary);
+    font-weight: var(--h3-font-weight);
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--black);
+    text-align: center;
+    
+    border: clamp(2px, 0.5vw, 3px) solid var(--black);
+    border-radius: 8px;
+    padding: clamp(15px, 3vw, 25px) clamp(20px, 4vw, 40px);
+    
+    position: relative;
+    cursor: pointer;
+    transform: translateZ(0);
+    transition: transform 0.2s;
+    
+    box-shadow: 6px 6px 0 var(--black);
+}
+
+.skills_content_display {
+    min-height: 300px;
+}
+
+.skills_tab_content {
+    padding: clamp(15px, 3vw, 25px);
+}
+
+.webdev_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: clamp(20px, 4vw, 40px);
+}
+
+.frontend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.skills_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: clamp(10px, 2vw, 20px);
+}
+
+.front_end h3, .back_end h3, .skills_tab_content h3 {
+    margin-bottom: clamp(15px, 3vw, 25px);
+    color: var(--black);
+    font-weight: var(--h3-font-weight);
+}
+
+#webdev_category {
+    background-color: var(--yellow);
+}
+
+#webdev_category:active, #webdev_category:hover {
+    background-color: var(--darkorange);
+}
+
+#software_category {
+    background-color: var(--blue);
+}
+
+#software_category:active, #software_category:hover {
+    background-color: var(--purple);
+}
+
+#design_category {
+    background-color: var(--pink);
+}
+
+#design_category:active, #design_category:hover {
+    background-color: var(--darkpink);
+}
+
+#devops_category {
+    background-color: var(--darkorange);
+}
+
+#devops_category:active, #devops_category:hover {
+    background-color: var(--beige);
+}
+
+.retro_computer {
+    width: clamp(150px, 27%, 360px);
+    height: auto;
+    margin-left: 20px;
+}
+
+/* section projects */

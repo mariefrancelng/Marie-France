@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     const navItems = document.querySelectorAll('.nav_item');
     
-    // Gestion des boutons "À propos"
+    // Gestion des boutons aboutme
     const buttons = document.querySelectorAll('.content_btn');
     const contents = document.querySelectorAll('.tab_content');
     
@@ -16,6 +16,22 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
             
             const contentId = this.id.replace('_btn', '_content');
+            document.getElementById(contentId).classList.add('active');
+        });
+    });
+
+    // Gestion des boutons compétences
+    const skillButtons = document.querySelectorAll('.skill_category');
+    const skillContents = document.querySelectorAll('.skills_tab_content');
+
+    skillButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            skillButtons.forEach(btn => btn.classList.remove('active'));
+            skillContents.forEach(content => content.classList.remove('active'));
+            
+            this.classList.add('active');
+            
+            const contentId = this.id.replace('_category', '_content');
             document.getElementById(contentId).classList.add('active');
         });
     });
