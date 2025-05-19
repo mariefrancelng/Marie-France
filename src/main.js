@@ -35,6 +35,34 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(contentId).classList.add('active');
         });
     });
+
+    // Gestion des boutons projets
+    const projectModal = document.querySelectorAll('.project_modal');
+
+    projectModal.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+
+            const modalId = this.getAttribute('data-target');
+            const modal = document.getElementById(modalId);
+
+            modal.classList.add('show');
+        });
+    });
+
+    const closeButtons = document.querySelectorAll('.close-modal');
+    
+    closeButtons.forEach(button => {
+      button.addEventListener('click', function() {
+      
+        this.closest('.modal').classList.remove('show');
+      });
+    });
+
+    window.addEventListener('click', function(event) {
+      if (event.target.classList.contains('modal') && event.target.classList.contains('show')) {
+        event.target.classList.remove('show');
+      }
+    });
     
     // Ici la gestion du défilement
     function handleScroll() {

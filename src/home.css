@@ -1,7 +1,7 @@
 #home_body {
     all: initial;
     box-sizing: border-box;
-    font-family: var(--font-family);
+    font-family: var(--font-primary);
     overflow-x: hidden;
 }
 
@@ -516,3 +516,292 @@ nav.scrolled #lang-select {
 }
 
 /* section projects */
+.projects_container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    gap: clamp(10px, 2vw, 20px);
+    margin-left: clamp(10px, 2vw, 20px);
+    padding: clamp(10px, 2vw, 30px) 0;
+}
+
+.project_card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+
+    border-radius: clamp(12px, 2vw, 25px);
+    padding: clamp(1rem, 1.5vw, 1.5rem);
+    max-width: clamp(300px, 80vw, 950px);
+    height: clamp(300px, 50vw, 450px);
+
+    position: relative;
+    border: clamp(2px, 0.5vw, 5px) solid var(--black);
+    box-shadow: clamp(5px, 1.2vw, 12px) clamp(5px, 1.2vw, 12px) 0 var(--black);
+    margin: 0 clamp(0.5rem, 1vw, 1rem);
+}
+
+#budme {
+    background-color: var(--darkpink);
+}
+
+#guardian {
+    background-color: var(--darkorange);
+}
+
+#mingle {
+    background-color: var(--green);
+}
+
+#aebox {
+    background-color: var(--blue);
+}
+
+.window_header {
+    display: flex;
+
+    gap: clamp(0.4rem, 0.8vw, 0.8rem);
+    margin-bottom: clamp(0.8rem, 1.5vw, 1.5rem);
+
+    position: relative;
+}
+
+.dot {
+    width: clamp(15px, 2.5vw, 25px);
+    height: clamp(15px, 2.5vw, 25px);
+    border-radius: 50%;
+    border: clamp(2px, 0.5vw, 5px) solid var(--black);
+
+}
+
+.yellow {
+    background-color: var(--yellow);
+}
+
+.pink {
+    background-color: var(--pink);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.blue_star {
+    position: absolute;
+
+    top: clamp(-59px, -6vw, -59px);
+    left: 20%;
+
+    width: clamp(35px, 6.5vw, 65px);
+    height: clamp(35px, 6.5vw, 65px);
+}
+
+.yellow_star {
+    position: absolute;
+
+    bottom: clamp(20px, 3.6vw, 36px);
+    right: clamp(-28px, -2.8vw, -28px);
+
+    width: clamp(60px, 10.9vw, 109px);
+    height: clamp(60px, 10.9vw, 109px);
+}
+
+.window_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--beige);
+    border: clamp(2px, 0.4vw, 4px) solid var(--black);
+    border-radius: clamp(10px, 2vw, 20px);
+
+    width: clamp(280px, 35vw, 600px);
+    height: clamp(150px, 18vw, 350px);
+}
+
+.project_logo {
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mingle {
+    width: 80%;
+}
+
+.project_buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: clamp(1.5%, 3vw, 3%);
+    gap: clamp(20px, 6vw, 60px);
+}
+
+.btn_primary {
+    font-family: var(--font-primary);
+    font-weight: var(--h2-font-weight);
+    font-size: clamp(16px, 2vw, 20px);
+
+    padding: clamp(10px, 2vw, 15px) clamp(20px, 3vw, 30px);
+
+    border-radius: clamp(10px, 2vw, 15px);
+    border: clamp(2px, 0.5vw, 3px) solid var(--black);
+    box-shadow: clamp(3px, 0.8vw, 4px) clamp(3px, 0.8vw, 4px) 0 var(--black);
+    background-color: var(--pink);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn_primary:hover {
+    transform: translateY(2px);
+
+    background-color: var(--darkorange);
+    box-shadow: clamp(2px, 0.5vw, 3px) clamp(2px, 0.5vw, 3px) 0 var(--black);
+}
+
+.btn_secondary {
+    font-family: var(--font-primary);
+    font-weight: var(--h2-font-weight);
+    font-size: clamp(16px, 2vw, 20px);
+
+    padding: clamp(10px, 2vw, 15px) clamp(20px, 3vw, 30px);
+
+    border-radius: clamp(10px, 2vw, 15px);
+    border: clamp(2px, 0.5vw, 3px) solid var(--black);
+    box-shadow: clamp(3px, 0.8vw, 4px) clamp(3px, 0.8vw, 4px) 0 var(--black);
+    background-color: var(--green);
+    color: var(--black);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn_secondary:hover {
+    transform: translateY(2px);
+
+    background-color: var(--yellow);
+    box-shadow: clamp(2px, 0.5vw, 3px) clamp(2px, 0.5vw, 3px) 0 var(--black);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal_content {
+    position: relative;
+    width: clamp(280px, 80vw, 900px);
+    height: 60%;
+
+    background: var(--beige);
+    border: 4px solid var(--black);
+    border-radius: clamp(12px, 2vw, 20px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+    padding: 0;
+    animation: modalEntry 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal_header {
+    background-color: var(--darkpink); 
+    padding: 10px 15px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: solid 6px var(--black);
+}
+
+.guardian_header {
+    background-color: var(--darkorange); 
+}
+
+.mingle_header {
+    background-color: var(--green); 
+}
+
+.aebox_header {
+    background-color: var(--blue); 
+}
+
+.close-modal {
+    position: absolute;
+    top: -0.7rem;
+    right: 1.5rem;
+    font-size: 4rem;
+    cursor: pointer;
+    color: var(--black);
+    transition: transform 0.3s ease;
+}
+
+.modal_logo {
+    width: 50%;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+}
+
+.modal_body p {
+    padding: 2rem;
+    font-size: clamp(16px, 2vw, 8px);
+    color: var(--black);
+    line-height: var(--p-line-height);
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 10px;
+    margin-bottom: 1rem;
+
+    gap: clamp(6px, 1vw, 10px);
+}
+
+.tags span {
+    background-color: var(--yellow);
+    padding: clamp(4px, 0.8vw, 6px) clamp(8px, 1.5vw, 12px);
+    border-radius: 5px;
+    font-size: clamp(10px, 1.2vw, 15px);
+    font-weight: var(--h3-font-weight);
+}
+
+.modal_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(6px, 2vw, 30px);
+    margin-top: clamp(15px, 2vw, 20px);
+}
+
+.modal_buttons a {
+    color: var(--black);
+}
+
+#projects {
+    padding: clamp(30px, 5vw, 60px) 0;
+}
