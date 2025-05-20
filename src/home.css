@@ -1,6 +1,7 @@
 #home_body {
     all: initial;
     box-sizing: border-box;
+    background-color: var(--purple);
     font-family: var(--font-primary);
     overflow-x: hidden;
 }
@@ -804,4 +805,159 @@ nav.scrolled #lang-select {
 
 #projects {
     padding: clamp(30px, 5vw, 60px) 0;
+}
+
+/* Footer */
+#contact_footer {
+    border-top: clamp(3px, 0.6vw, 5px) solid var(--black);
+    padding: clamp(40px, 6vw, 80px) clamp(20px, 4vw, 40px) clamp(30px, 4vw, 50px);
+    margin-top: clamp(50px, 8vw, 100px);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(40px, 6vw, 80px);
+    margin-bottom: clamp(40px, 5vw, 60px);
+    position: relative;
+}
+
+.footer_right {
+    display: flex;
+    align-items: center;
+    gap: clamp(25px, 4vw, 40px);
+    flex: 1;
+}
+
+.footer_persona {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.persona_img {
+    width: clamp(80px, 12vw, 250px);
+    height: auto;
+
+    padding: clamp(8px, 1.5vw, 15px);
+}
+
+.footer_text h3 {
+    font-size: clamp(20px, 3.5vw, 32px);
+    font-weight: var(--h3-font-weight);
+    color: var(--black);
+    margin-bottom: clamp(8px, 1.5vw, 15px);
+    line-height: var(--h3-line-height);
+}
+
+.footer_text p {
+    font-size: clamp(16px, 2.2vw, 20px);
+    color: var(--black);
+    font-weight: var(--p-font-weight);
+    line-height: var(--p-line-height);
+}
+
+.footer_left {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer_buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(15px, 2.5vw, 25px);
+    max-width: 500px;
+}
+
+.footer_btn {
+    font-family: var(--font-primary);
+    font-weight: var(--h3-font-weight);
+    font-size: clamp(14px, 1.8vw, 18px);
+    color: var(--black);
+    text-decoration: none;
+    text-align: center;
+
+    padding: clamp(12px, 2vw, 18px) clamp(15px, 2.5vw, 25px);
+    border: clamp(2px, 0.4vw, 3px) solid var(--black);
+    border-radius: clamp(8px, 1.5vw, 12px);
+    box-shadow: clamp(3px, 0.6vw, 4px) clamp(3px, 0.6vw, 4px) 0 var(--black);
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(6px, 1vw, 10px);
+}
+
+.footer_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: clamp(4px, 0.8vw, 5px) clamp(4px, 0.8vw, 5px) 0 var(--black);
+}
+
+.footer_btn:active {
+    transform: translateY(2px);
+    box-shadow: clamp(2px, 0.4vw, 2px) clamp(2px, 0.4vw, 2px) 0 var(--black);
+}
+
+.cv_btn {
+    background-color: var(--pink);
+}
+
+.cv_btn:hover {
+    background-color: var(--darkpink);
+}
+
+.linkedin_btn {
+    background-color: var(--blue);
+}
+
+.linkedin_btn:hover {
+    background-color: var(--purple);
+}
+
+.github_btn {
+    background-color: var(--darkorange);
+}
+
+.github_btn:hover {
+    background-color: var(--yellow);
+}
+
+.email_btn {
+    background-color: var(--green);
+    grid-column: 1 / -1;
+}
+
+.email_btn:hover {
+    background-color: var(--yellow);
+}
+
+.footer_bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    padding-top: clamp(25px, 4vw, 40px);
+    border-top: clamp(2px, 0.4vw, 3px) dashed var(--black);
+}
+
+.copyright {
+    font-size: clamp(14px, 1.8vw, 16px);
+    color: var(--black);
+    font-weight: var(--p-font-weight);
+    text-align: center;
+    margin: 0;
 }
