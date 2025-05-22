@@ -162,12 +162,24 @@ nav.scrolled .nav_item.projects::before  {
     content: 'P';
 }
 
+nav.scrolled .nav_item.projects:hover::before  {
+    content: '';
+}
+
 nav.scrolled .nav_item.skills::before {
     content: 'S';
 }
 
+nav.scrolled .nav_item.skills:hover::before {
+    content: '';
+}
+
 nav.scrolled .nav_item.about::before {
     content: 'A';
+}
+
+nav.scrolled .nav_item.about:hover::before {
+    content: '';
 }
 
 nav.scrolled #lang-select {
