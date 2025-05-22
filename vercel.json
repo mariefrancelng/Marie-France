@@ -6,12 +6,22 @@
       "source": "/home.html",
       "destination": "/home",
       "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/index",
+      "permanent": true
     }
   ],
   "rewrites": [
     {
       "source": "/home",
       "destination": "/home.html"
+    },
+
+    {
+      "source": "/index",
+      "destination": "/index.html"
     }
   ]
 }
