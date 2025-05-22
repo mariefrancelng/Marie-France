@@ -62,15 +62,15 @@
     }
     
     .star {
-      top: -30%;
-      left: -30%;
-      width: clamp(100px, 50vw, 800px);
+      top: -50%;
+      left: -32%;
+      width: clamp(100px, 50vw, 750px);
     }
     
     .duo_fruit {
       bottom: 0;
-      right: -7%;
-      width: clamp(250px, 47vw, 750px);
+      right: -9%;
+      width: clamp(250px, 47vw, 669px);
     }
     
     h1 {
@@ -1407,7 +1407,3 @@
     animation: footerButtonEntry 0.6s ease forwards;
 }
 
-.footer_btn:nth-child(1) { animation-delay: 0.1s; }
-.footer_btn:nth-child(2) { animation-delay: 0.2s; }
-.footer_btn:nth-child(3) { animation-delay: 0.3s; }
-.footer_btn:nth-child(4) { animation-delay: 0.4s; }

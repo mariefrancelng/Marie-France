@@ -826,7 +826,7 @@ nav.scrolled #lang-select {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: clamp(40px, 6vw, 80px);
+    gap: clamp(40px, 6vw, 115px);
     margin-bottom: clamp(40px, 5vw, 60px);
     position: relative;
 }
@@ -950,7 +950,7 @@ nav.scrolled #lang-select {
     align-items: center;
     position: relative;
     
-    padding-top: clamp(25px, 4vw, 40px);
+    padding-top: clamp(25px, 4vw, 25px);
     border-top: clamp(2px, 0.4vw, 3px) dashed var(--black);
 }
 
